@@ -8,26 +8,31 @@
   
    <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css“>
    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  
 
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
  
 </head>
 <body>
       
 
       
-<div class = “container”>
-   <div id = “timer”><div class= “values”>
-   <h2>Seconds left: <span id = “timeLeft”></span></h2> 
-   </div>
-   </div>
+    <div class = "container">
+        <div id = "timer"><div class= "values">
+        <h2>Seconds left: <span id = "timeLeft"></span></h2> 
+        </div>
+        </div>
+    
+    <div id = "buttons">
+        <button id="start">Click to Start</button>
+    </div>
 
-<div id = “buttons”>
-   <button id=“start”>Click to Start</button>
-</div>
 
-   <h2>Question</h2>
-   <div id = “questions” style=display:none”>
-   
+   <div id = "questions" style="display:none">
+      <h2>Question</h2>
            <form>
                    <fieldset>
                        <legend>1:Which of the following is correct?</legend>
@@ -209,20 +214,20 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>10:Thill Of The _________</legend>
+                        <legend>10:And I Say _________</legend>
                 
                         <div>
                             <input type=radio answer=“json” name=“q10” />
-                            <label for=“huey”>Fight</label>
+                            <label for=“huey”>heyeyeyeyey</label>
                         </div>
                 
                         <div>
-                            <input type=radio answer=“js” name=“q10” />
-                            <label for=“dewey”>Flight</label>
+                            <input type=radio answer=“hi” name=“q10” />
+                            <label for=“dewey”>heyayayayayaya</label>
                         </div>
                 
                         <div>
-                            <input type=radio answer=“cray” name=“q10” />
+                            <input type=radio answer=“Plumbis” name=“q10” />
                             <label for=“louie”>Plumbis</label>
                         </div>
                 
@@ -231,13 +236,19 @@
                
     <button type=submit id='submit'>submit</button>
    <h2>Answer</h2>
+
+   </div>
    
-</div>
-       <div id=“end” style=display:none”>
-           you lose
-       </div>
-</div>
-   <script type=“text/javascript” src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script>
+   <div id="end" style="display: none">
+        Time's up!
+        <br>
+        <p>Correct: <span id="correct"></span></p> 
+        <p>Wrong: <span id="wrong"></span> </p>  
+        <p>Unanswered: <span id="unanswered"></span></p>  
+    </div>
+
+    </div>
+    
    <script src="main.js"></script>
 </body>
 </html>
