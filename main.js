@@ -3,14 +3,16 @@
 var answers = ["js","potato","own","plumbis","hot","data","42","dance","crabCore","hi","Plumbis"];
 
 
-var audioElement = document.createElement("audio");
-audioElement.setAttribute("src", "assets/hi.mp3");
+var audioElement1 = document.createElement("audio");
+audioElement1.setAttribute("src", "assets/hi.mp3");
 
+var audioElement2 = document.createElement("audio");
+audioElement2.setAttribute("src", "assets/CD.mp3");
 
 
 $("#start").on("click", function(){
     startTimer();
-    audioElement.play()
+    audioElement1.play()
 });
 
 
@@ -32,10 +34,10 @@ function count(){
     timeLeft--;
     
     $("#timeLeft").text(timeLeft);
-    if(timeLeft === 60||timeLeft===15||timelife===5||timelife===3){
+    if(timeLeft === 60||timeLeft===15||timeLeft===5||timeLeft===3){
         $("body").css("background-image", "url(https://78.media.tumblr.com/be5282deb7246c88281bf137efd33cd7/tumblr_ni4kiqzYgE1rnq3cto1_500.gif)");
     }
-    if(timeLeft===30||timelife===10||timelife===4||timelife===2||timelife===1){
+    if(timeLeft===30||timeLeft===10||timeLeft===4||timeLeft===2||timeLeft===1){
         $("body").css("background-image", "url(https://giant.gfycat.com/HarshDetailedFieldspaniel.gif)");
     }
 
@@ -72,7 +74,8 @@ function gameOver(){
 
 $(document).on('click', '#submit', function(event){
     event.preventDefault();
-
+    audioElement2.play()
+    audioElement1.pause()
     for (let i = 0; i < answers.length; i++) {
 
         
